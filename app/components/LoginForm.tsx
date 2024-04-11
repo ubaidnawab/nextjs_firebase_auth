@@ -9,7 +9,7 @@ const LoginForm = () => {
   const [password, setPassword] = useState('Welcome@1!');
   const [error, setError] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     try {   
       await signInWithEmailAndPassword(auth, email, password);
@@ -27,7 +27,7 @@ const LoginForm = () => {
         </div>
       )}
   
-      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-4 sm:p-8 max-w-md w-full">
+      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg w-96 sm:80 h-[23rem] p-6 flex flex-col justify-center">
         <div className="mb-4 sm:mb-8">
           <input
             id="email"
