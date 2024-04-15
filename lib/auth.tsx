@@ -12,7 +12,7 @@ export async function signOut() {
   return firebaseSignOut(auth);
 }
 
-export const useUser = ()=> {
+export const UseUser = ()=> {
   const [user, setUser] = useState<FirebaseUser | null | false>(false);
 
   useEffect(() => {

@@ -1,10 +1,10 @@
 "use client";
 import Link from 'next/link';
 import { useState } from 'react';
-import { signOut, useUser } from "@/lib/auth";
+import { signOut, UseUser } from "@/lib/auth";
 
 const NavBar = () => {
-  const user = useUser();
+  const user = UseUser();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
